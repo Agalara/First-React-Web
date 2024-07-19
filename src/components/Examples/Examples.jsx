@@ -15,7 +15,8 @@ export default function Examples (){
   }
 
   let content = (
-    !selectedTopic ? (<p>Choose a topic</p>) 
+    !selectedTopic 
+    ? (<p>Choose a topic</p>) 
     :(
       <div id="tab-content">
         <h3>{EXAMPLES[selectedTopic].title}</h3>
@@ -27,10 +28,11 @@ export default function Examples (){
           </pre>
         </div>
       )
-    )
+  )
   return (
     <Section title="Examples" id="examples">
       <Tabs
+        ButtonsContainer="menu"
         buttons={
           <>
           <TabButton 
